@@ -1,0 +1,30 @@
+## Black Hat C++: C++ for pentesters
+- Resources
+    - https://github.com/ec-council-learning/BlackHat-C-C-For-Pentesters
+- Tools
+    - impacket
+        - Python library for working with network protocols
+    - CrackMapExec
+        - Designed for Windows envs
+        - RCE, lateral movement and vuln assessment
+        - Credential theft, pass-the-hash, network recon and security assessment
+    - LOLBAS - Living Off the Land
+        - Legit binaries on the system
+        - Eg. Sysinternals, powershell
+- Password dumping
+    - Requires elevated privileges
+    - `lsass.exe` process stores sensitive auth info
+    - mimikatz can be used to extract passwords from the `lsass.exe` process
+        - Requires admin privileges
+    - Employing MitM or network interception to catch auth details in motion
+- Anti-Virus evasion
+    - DLL injection - load malicious DLL into legitimate process
+        - Execute code within a trusted process
+        - Leverages process hollowing or DLL injection
+    - Process injection - Inject malicious code into a running process on target system
+        - Leverages DLL injection, code injection and thread execution hijacking
+    - Disabling AV process
+        - Terminate process, disable service, modifying the AV settings or tampering with the signatures/scan config
+    - Execution through system calls
+        - Helps evade signature-based detection
+        - Leverages low-level system functions to execute malicious code
